@@ -7,9 +7,7 @@ import android.view.View
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     var btn_java: ImageButton? = null
     var btn_insta: ImageButton? = null
     var btn_github: ImageButton? = null
+    var progress_bar:ProgressBar?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,18 +34,16 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
+
+                Toast.makeText(this@MainActivity,url,Toast.LENGTH_SHORT).show()
+                progress_bar?.visibility=View.VISIBLE
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
+                progress_bar?.visibility=View.GONE
             }
 
-            override fun shouldOverrideUrlLoading(
-                view: WebView?,
-                request: WebResourceRequest?
-            ): Boolean {
-                return super.shouldOverrideUrlLoading(view, request)
-            }
 
         }
 
@@ -63,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         btn_java = findViewById(R.id.btn_javatpoint)
         btn_insta = findViewById(R.id.btn_instagram)
         btn_github = findViewById(R.id.btn_github)
-
+        progress_bar=findViewById(R.id.progress_bar)
 
     }
 
@@ -75,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         when (view.id) {
             R.id.btn_serach -> {
-                webView?.loadUrl(url)
+                webView?.loadUrl("https://${url}")
             }
 
             R.id.btn_youtube -> {
