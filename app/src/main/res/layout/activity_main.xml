@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F4CE6A"
+    android:background="#23B6A9"
     android:padding="5dp">
 
     <LinearLayout
@@ -19,7 +19,6 @@
             android:id="@+id/et_url"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:layout_weight="0.9"
             android:background="@drawable/edit_bg"
             android:hint="please enter url here"
@@ -30,7 +29,6 @@
             android:id="@+id/btn_serach"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:layout_weight="0.1"
             android:background="@drawable/ic_baseline_search_24"
             android:padding="10dp" />
@@ -47,7 +45,6 @@
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +66,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
         android:layout_weight="0.07"
         android:orientation="horizontal">
 
@@ -78,6 +74,7 @@
             android:id="@+id/btn_youtube"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_margin="5dp"
             android:layout_weight="0.25"
             android:background="@drawable/youtube" />
@@ -88,6 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:padding="10dp"
             android:background="@drawable/java"
             android:layout_weight="0.25" />
 
@@ -96,6 +94,7 @@
             android:onClick="callUrl"
             android:id="@+id/btn_instagram"
             android:layout_width="0dp"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/instagram"
@@ -107,6 +106,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:padding="10dp"
             android:background="@drawable/github"
             android:layout_weight="0.25" />
 
